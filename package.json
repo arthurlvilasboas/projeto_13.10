@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --runInBand",
-    "test:coverage": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --coverage",
+    "test:coverage": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest --coverage --runInBand",
     "start": "ts-node src/index.ts",
     "watch": "nodemon src/index.ts"
   },
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/jest": "^29.1.2",
     "@types/node": "^18.7.16",
+    "mongodb-memory-server": "^8.9.3",
     "nodemon": "^2.0.19",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
