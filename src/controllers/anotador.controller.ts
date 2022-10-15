@@ -16,14 +16,15 @@ export class AnotadorController {
             if (queryNomePT && queryData) {
                 const nomePT = queryNomePT.toString();
                 const data = queryData.toString();
-                const registo = await this.anotador.anotarPassaro(nomePT, data);
+                const registro = await this.anotador.anotarPassaro(nomePT, data);
                 const registroDTO: AnotadorDTO = {
                     nomeDoPassaro: nomePT,
-                    dataDoAvistamento: data
+                    dataDoAvistamento: data,
+                    anotacao: registro
                 };
                 res.json(registroDTO);
             } else {
-                res.status(400).send('Parâmetros inválidos')
+                res.status(400).send('Parâmetros inválidos');
             }
         } catch (error) {
             next(error);
