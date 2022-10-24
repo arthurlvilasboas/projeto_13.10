@@ -5,7 +5,7 @@ const router = Router ();
 const basePath = '/anotar';
 //const controller = 
 
-//GET /conversor
+//GET /anotador
 router.get(basePath, criarAnotadorController().tratador);
 
 export {router, basePath};
