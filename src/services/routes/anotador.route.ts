@@ -6,6 +6,6 @@ const basePath = '/anotar';
 //const controller = 
 
 //GET /anotador
-router.get(basePath, criarAnotadorController().tratador);
+router.get('', criarAnotadorController().tratador);
 
 export {router, basePath};

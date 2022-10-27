@@ -8,6 +8,7 @@ try {
     console.log('Inicializando o Express...');
     const app = (await import('./services/config/app.js')).default;
     app.listen(app.get('port'), () => {
+        console.log(`Rota ativa: ${app.get('routes')}`);
         console.log(`Express na porta: ${app.get('port')}`);
         console.log(`Express no modo: ${app.get('env')}`);
     });

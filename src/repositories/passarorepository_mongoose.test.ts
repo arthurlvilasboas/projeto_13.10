@@ -24,9 +24,9 @@ describe('PassaroRepositoryMongoose', () => {
             const nomePortugues = 'ema';
             const passaros = await repositorio.buscarPorNomePT(nomePortugues);
             expect(passaros).toBeDefined();
-            //expect(passaros?.cor).toBe('cinza');
-            //expect(passaros?.habitat).toBe('campo');
-            //expect(passaros?.tamanhoCm).toBeGreaterThanOrEqual(130);
+            expect(passaros?.cor).toBe('cinza');
+            expect(passaros?.habitat).toBe('campo');
+            expect(passaros?.tamanhoCm).toBeGreaterThanOrEqual(130);
         });
     });
 });
