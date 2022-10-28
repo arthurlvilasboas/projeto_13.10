@@ -1,13 +1,13 @@
 import express from "express";
-import configMiddleware from './middleware.js'
-import configRoutes from './middleware.js'
+import middleware from './middleware.js';
+import routes from './routes.js'; 
 
 const porta = process.env.PORT || 3000;
 const app = express();
 app.set('port',porta);
 //configurar middleware
-configMiddleware(app);
+middleware(app);
 //configurar as rotas
-configRoutes(app);
+routes(app);
 
 export default app;

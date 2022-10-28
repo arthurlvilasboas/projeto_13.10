@@ -4,11 +4,11 @@ import { PassaroRepository } from "../repositories/passarorepository.js";
 
 export class Anotacao {
     constructor(private repositorio: PassaroRepository){}
-    async anotarPassaro(nomePassaro: string, data: string){
-        const passaro = await this.repositorio.buscarPorNomePT(nomePassaro);
+    async anotarPassaro(data: string, nome: string){
+        /*const passaro = await this.repositorio.buscarPorNomePT(nomePassaro);
         if (!passaro) {
             throw new Error('Passaro nao encontrado');
-        }
-        return `No dia ${data}, foi avistado o passaro ${passaro}`;
+        }*/
+        return `No dia ${data}, foi avistado o passaro ${nome}`;
     }
 }
